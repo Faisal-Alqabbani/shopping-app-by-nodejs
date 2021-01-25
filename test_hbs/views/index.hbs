@@ -1,0 +1,31 @@
+<div class="container">
+{{#if success}}
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<form action="/users/info" method="post">
+<input type="text" name="id">
+<br>
+<button>Submit</button>
+</form>
+    
+{{else}}
+<div>
+    <h1>Error feild</h1>
+    {{#each error}}
+    <ul>
+        <li class="alert alert-danger">{{this.msg}}</li>
+    </ul>
+    
+        
+    {{/each}}
+</div>
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<form action="/users/info" method="post">
+<input type="text" name="id">
+<br>
+<button>Submit</button>
+</form>
+    
+{{/if}}
+</div>

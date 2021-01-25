@@ -1,0 +1,105 @@
+<div class="row">
+  <div class="col-sm-3"> 
+     <div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Insert User</div>
+  <div class="card-body text-dark">
+  <form action="/insert" method="post">
+  <div class="form-group">
+    <label>User Name</label>
+    <input type="text" class="form-control" placeholder="Enter Username" name="username">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">User E-Mail</label>
+    <input type="email" class="form-control" placeholder="Enter Email" name="usermail">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <div class="text-center">  <button type="submit" class="btn btn-primary btn-block">Submit</button></div>
+
+</form>
+</div>
+</div>
+  
+  </div>
+
+<div class="col-sm-3">
+
+    
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Get All Users</div>
+  <div class="card-body text-dark">
+      {{#each items}}
+      <ul>
+          <li>{{this._id}}</li>
+          <li> {{this.username}} <small>{{this.userMail}}</small></li>
+          
+      </ul>
+      <hr>
+         
+      {{/each}}
+<form action="/getUsers" method="get">
+  <div class="text-center">  <button type="submit" class="btn btn-primary btn-block">Get All Users</button></div>
+</form>
+</div>
+</div>
+  
+  </div>
+  
+  
+  <div class="col-sm-3"> 
+     <div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Update User</div>
+  <div class="card-body text-dark">
+  <form action="/update" method="post">
+   <div class="form-group">
+    <label >ID</label>
+    <input type="text" class="form-control" placeholder="User ID" name="_id">
+  </div>
+  <div class="form-group">
+    <label>User Name</label>
+    <input type="text" class="form-control" placeholder="Enter Username" name="username">
+    
+  </div>
+ 
+  <div class="form-group">
+    <label for="exampleInputPassword1">User E-Mail</label>
+    <input type="email" class="form-control" placeholder="Enter Email" name="usermail">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <div class="text-center">  <button type="submit" class="btn btn-primary btn-block">Update</button></div>
+
+</form>
+</div>
+</div>
+  
+  </div>
+
+<div class="col-sm-3"> 
+     <div class="card border-dark mb-3" style="max-width: 18rem;">
+  <div class="card-header">Update User</div>
+  <div class="card-body text-dark">
+  <form action="/delete" method="post">
+   <div class="form-group">
+    <label >ID</label>
+    <input type="text" class="form-control" placeholder="User ID" name="_id">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <div class="text-center">  <button type="submit" class="btn btn-danger btn-block">Delete</button></div>
+
+</form>
+</div>
+</div>
+  
+  </div>
+
+
+</div>

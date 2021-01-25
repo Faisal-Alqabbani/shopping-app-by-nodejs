@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    ol(id="name")
+      li Faisal
+      li mohammed
+    input(type="text").class-name#anyId
+    if condition
+      p #{condition}
+    -const names = ['Faisal','Jumanah','Latifa','Mohammed']
+    each name in names
+      p your name is #{name}

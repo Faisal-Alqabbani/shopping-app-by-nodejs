@@ -1,0 +1,39 @@
+<h3>User Profile</h3>
+
+{{#each order as |val index|}}
+
+<table class="table table-striped">
+  <thead>
+      <tr class="table-active"> 
+        <td colspan="4" style="font-weight: bold;" class="text-center">Order Number: {{add @index}}</td>
+       
+     </tr>
+      
+    <tr>
+      <th scope="col" class="text-center">#</th>
+      <th scope="col" class="text-center">Product Name</th>
+      <th scope="col" class="text-center">Proudct Quantity</th>
+       <th scope="col" class="text-center">Totalprice</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+      {{#each this.cart.selectedProduct as |val indexProduct|}}
+          <tr>
+      <th scope="row" >{{add @indexProduct}}</th>
+      <td class="text-center">{{val.name}}</td>  
+      <td class="text-center">{{val.quantity}}</td>
+      <td class="text-center"><i>$</i>{{val.price}}</td>
+
+    </tr> 
+      {{/each}}
+    <tr class="table-primary"> 
+      <td colspan="4" style="font-weight: bold;">Total Price: <i>$</i>{{this.orderprice}}</td>
+     
+    </tr>
+   
+   
+  </tbody>
+</table>
+    
+{{/each}}
